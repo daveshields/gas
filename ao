@@ -1,0 +1,382 @@
+gcc  -D m64 -m64 -static  -c  -obreak.o ./osint/break.c
+gcc  -D m64 -m64 -static  -c  -ocheckfpu.o ./osint/checkfpu.c
+gcc  -D m64 -m64 -static  -c  -ocompress.o ./osint/compress.c
+./osint/compress.c: In function ‘decode_string’:
+./osint/compress.c:211:13: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+             exit(1);
+             ^~~~
+./osint/compress.c:211:13: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/compress.c:211:13: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -ocpys2sc.o ./osint/cpys2sc.c
+gcc  -D m64 -m64 -static  -c  -odoset.o ./osint/doset.c
+gcc  -D m64 -m64 -static  -c  -odosys.o ./osint/dosys.c
+./osint/dosys.c: In function ‘dosys’:
+./osint/dosys.c:25:12: warning: implicit declaration of function ‘system’; did you mean ‘zystm’? [-Wimplicit-function-declaration]
+     return system( cmd );
+            ^~~~~~
+            zystm
+gcc  -D m64 -m64 -static  -c  -ofloat.o ./osint/float.c
+gcc  -D m64 -m64 -static  -c  -oflush.o ./osint/flush.c
+gcc  -D m64 -m64 -static  -c  -ogethost.o ./osint/gethost.c
+gcc  -D m64 -m64 -static  -c  -ogetshell.o ./osint/getshell.c
+gcc  -D m64 -m64 -static  -c  -olenfnm.o ./osint/lenfnm.c
+gcc  -D m64 -m64 -static  -c  -omath.o ./osint/math.c
+gcc  -D m64 -m64 -static  -c  -ooptfile.o ./osint/optfile.c
+gcc  -D m64 -m64 -static  -c  -oosclose.o ./osint/osclose.c
+./osint/osclose.c: In function ‘osclose’:
+./osint/osclose.c:67:13: warning: implicit declaration of function ‘kill’ [-Wimplicit-function-declaration]
+             kill( ioptr->pid );
+             ^~~~
+gcc  -D m64 -m64 -static  -c  -oosopen.o ./osint/osopen.c
+gcc  -D m64 -m64 -static  -c  -oospipe.o ./osint/ospipe.c
+./osint/ospipe.c: In function ‘ospipe’:
+./osint/ospipe.c:95:9: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+         exit(1);   // Should never get here!
+         ^~~~
+./osint/ospipe.c:95:9: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/ospipe.c:95:9: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -oosread.o ./osint/osread.c
+gcc  -D m64 -m64 -static  -c  -ooswait.o ./osint/oswait.c
+./osint/oswait.c: In function ‘oswait’:
+./osint/oswait.c:38:24: warning: implicit declaration of function ‘wait’; did you mean ‘write’? [-Wimplicit-function-declaration]
+     while ( (deadpid = wait( &status )) != pid  &&  deadpid != -1 )
+                        ^~~~
+                        write
+gcc  -D m64 -m64 -static  -c  -ooswrite.o ./osint/oswrite.c
+gcc  -D m64 -m64 -static  -c  -oprompt.o ./osint/prompt.c
+./osint/prompt.c: In function ‘prompt’:
+./osint/prompt.c:56:5: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+     exit(0);
+     ^~~~
+./osint/prompt.c:56:5: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/prompt.c:56:5: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -ordenv.o ./osint/rdenv.c
+./osint/rdenv.c:43:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ rdenv( varname, result )
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -ost2d.o ./osint/st2d.c
+gcc  -D m64 -m64 -static  -c  -ostubs.o ./osint/stubs.c
+./osint/stubs.c:13:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysdm()
+ ^~~~~
+./osint/stubs.c:19:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zystt()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -oswcinp.o ./osint/swcinp.c
+./osint/swcinp.c: In function ‘swcinp’:
+./osint/swcinp.c:212:17: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+                 exit(1);
+                 ^~~~
+./osint/swcinp.c:212:17: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/swcinp.c:212:17: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+./osint/swcinp.c:226:13: warning: incompatible implicit declaration of built-in function ‘exit’
+             exit(1);
+             ^~~~
+./osint/swcinp.c:226:13: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -oswcoup.o ./osint/swcoup.c
+gcc  -D m64 -m64 -static  -c  -osyslinux.o ./osint/syslinux.c
+gcc  -D m64 -m64 -static  -c  -otestty.o ./osint/testty.c
+gcc  -D m64 -m64 -static  -c  -otrypath.o ./osint/trypath.c
+gcc  -D m64 -m64 -static  -c  -owrtaout.o ./osint/wrtaout.c
+./osint/wrtaout.c: In function ‘openaout’:
+./osint/wrtaout.c:38:23: warning: implicit declaration of function ‘clock’; did you mean ‘lockf’? [-Wimplicit-function-declaration]
+     n = (unsigned int)clock();
+                       ^~~~~
+                       lockf
+./osint/wrtaout.c: In function ‘closeaout’:
+./osint/wrtaout.c:144:13: warning: implicit declaration of function ‘rename’; did you mean ‘renames’? [-Wimplicit-function-declaration]
+         if (rename(tmpfnbuf, fn) != 0)
+             ^~~~~~
+             renames
+gcc  -D m64 -m64 -static  -c  -ozz.o ./osint/zz.c
+gcc  -D m64 -m64 -static  -c  -osysax.o ./osint/sysax.c
+./osint/sysax.c:22:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysax()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysbs.o ./osint/sysbs.c
+gcc  -D m64 -m64 -static  -c  -osysbx.o ./osint/sysbx.c
+gcc  -D m64 -m64 -static  -c  -osyscm.o ./osint/syscm.c
+gcc  -D m64 -m64 -static  -c  -osysdc.o ./osint/sysdc.c
+./osint/sysdc.c: In function ‘zysdc’:
+./osint/sysdc.c:40:2: warning: ‘return’ with no value, in function returning non-void
+  return;
+  ^~~~~~
+./osint/sysdc.c:37:5: note: declared here
+ int zysdc()
+     ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysdt.o ./osint/sysdt.c
+./osint/sysdt.c:39:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysdt()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysea.o ./osint/sysea.c
+gcc  -D m64 -m64 -static  -c  -osysef.o ./osint/sysef.c
+gcc  -D m64 -m64 -static  -c  -osysej.o ./osint/sysej.c
+./osint/sysej.c: In function ‘zysej’:
+./osint/sysej.c:69:5: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+     exit( WB(int) );
+     ^~~~
+./osint/sysej.c:69:5: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/sysej.c:69:5: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -osysem.o ./osint/sysem.c
+gcc  -D m64 -m64 -static  -c  -osysen.o ./osint/sysen.c
+gcc  -D m64 -m64 -static  -c  -osysep.o ./osint/sysep.c
+gcc  -D m64 -m64 -static  -c  -osysex.o ./osint/sysex.c
+gcc  -D m64 -m64 -static  -c  -osysfc.o ./osint/sysfc.c
+gcc  -D m64 -m64 -static  -c  -osysgc.o ./osint/sysgc.c
+gcc  -D m64 -m64 -static  -c  -osyshs.o ./osint/syshs.c
+gcc  -D m64 -m64 -static  -c  -osysid.o ./osint/sysid.c
+gcc  -D m64 -m64 -static  -c  -osysif.o ./osint/sysif.c
+gcc  -D m64 -m64 -static  -c  -osysil.o ./osint/sysil.c
+./osint/sysil.c:20:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysil()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysin.o ./osint/sysin.c
+./osint/sysin.c:30:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysin()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysio.o ./osint/sysio.c
+./osint/sysio.c:31:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysio()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysld.o ./osint/sysld.c
+gcc  -D m64 -m64 -static  -c  -osysmm.o ./osint/sysmm.c
+./osint/sysmm.c: In function ‘moremem’:
+./osint/sysmm.c:68:21: warning: implicit declaration of function ‘exit’ [-Wimplicit-function-declaration]
+                     exit(1);
+                     ^~~~
+./osint/sysmm.c:68:21: warning: incompatible implicit declaration of built-in function ‘exit’
+./osint/sysmm.c:68:21: note: include ‘<stdlib.h>’ or provide a declaration of ‘exit’
+gcc  -D m64 -m64 -static  -c  -osysmx.o ./osint/sysmx.c
+gcc  -D m64 -m64 -static  -c  -osysou.o ./osint/sysou.c
+gcc  -D m64 -m64 -static  -c  -osyspl.o ./osint/syspl.c
+./osint/syspl.c:33:9: warning: type defaults to ‘int’ in declaration of ‘rearmbrk’ [-Wimplicit-int]
+ extern  rearmbrk (void);
+         ^~~~~~~~
+gcc  -D m64 -m64 -static  -c  -osyspp.o ./osint/syspp.c
+gcc  -D m64 -m64 -static  -c  -osysrw.o ./osint/sysrw.c
+gcc  -D m64 -m64 -static  -c  -osysst.o ./osint/sysst.c
+gcc  -D m64 -m64 -static  -c  -osysstdio.o ./osint/sysstdio.c
+./osint/sysstdio.c:83:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zysrd()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osystm.o ./osint/systm.c
+gcc  -D m64 -m64 -static  -c  -osystty.o ./osint/systty.c
+./osint/systty.c:42:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ zyspi()
+ ^~~~~
+gcc  -D m64 -m64 -static  -c  -osysul.o ./osint/sysul.c
+gcc  -D m64 -m64 -static  -c  -osysxi.o ./osint/sysxi.c
+./bin/sbl -x -u 64 lex.sbl
+     29346  lines read
+     12197  statements processed
+     12259  target code lines produced
+   1057336  spitbol statements executed
+         0  errors detected
+    139200  free bytes
+
+
+
+normal end
+in file              lex.sbl
+in line              1005
+in statement         704
+stmts executed       1057350
+execution time msec  98
+stmt / microsec      10
+stmt / millisec      10789
+stmt / second        10789000
+in line              119
+memory used (bytes)  300920
+memory left (bytes)  223360
+
+./bin/sbl -x -u 64 asm.sbl
+  input lex file                          : s.lex
+  output asm file                         : s.s
+  max.err 330
+     20717  lines read
+     12259  statements processed
+     16085  target code lines produced
+   1536894  spitbol statements executed
+       330  maximum err/erb number
+        19  prc count
+         0  errors detected
+     39043  free words
+
+
+
+normal end
+in file              asm.sbl
+in line              2270
+in statement         1859
+stmts executed       1536914
+execution time msec  119
+stmt / microsec      12
+stmt / millisec      12915
+stmt / second        12915000
+in line              109
+memory used (bytes)  211280
+memory left (bytes)  313000
+
+nasm -f elf64 -d m64 -l s.lst -os.o s.s
+copyright 2012-2020 david shields:1: error: label or instruction expected at start of line
+this file is part of macro spitbol.:1: error: label or instruction expected at start of line
+(at your option) any later version.:1: error: label or instruction expected at start of line
+gnu general public license for more details.:1: error: label or instruction expected at start of line
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:7: error: attempt to define a local label before any non-local labels
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:7: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:8: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:8: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:9: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:9: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:10: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:10: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:12: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:12: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:14: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:14: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:16: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:16: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:18: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:18: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:19: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:19: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:20: error: label or instruction expected at start of line
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:21: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:21: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:24: error: label or instruction expected at start of line
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:31: error: label or instruction expected at start of line
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:33: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:33: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:34: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:34: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:38: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:38: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:39: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:39: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:41: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:43: error: label or instruction expected at start of line
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:44: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:44: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:45: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:45: error: parser: instruction expected
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:46: error: symbol `.equ' redefined
+along with macro spitbol. if not, see <http://www.gnu.org/licenses/>.:46: error: parser: instruction expected
+s.s:2767: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:5327: error: parser: instruction expected
+s.s:5775: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:5775: error: symbol `stos_w' redefined
+s.s:6103: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6114: error: parser: instruction expected
+s.s:6239: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6239: error: symbol `stos_w' redefined
+s.s:6241: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6241: error: symbol `stos_w' redefined
+s.s:6271: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6271: error: symbol `stos_w' redefined
+s.s:6273: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6273: error: symbol `stos_w' redefined
+s.s:6275: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6275: error: symbol `stos_w' redefined
+s.s:6277: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6277: error: symbol `stos_w' redefined
+s.s:6280: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6280: error: symbol `stos_w' redefined
+s.s:6470: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6470: error: symbol `stos_w' redefined
+s.s:6472: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6472: error: symbol `stos_w' redefined
+s.s:6474: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6474: error: symbol `stos_w' redefined
+s.s:6477: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6477: error: symbol `stos_w' redefined
+s.s:6479: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6479: error: symbol `stos_w' redefined
+s.s:6484: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6484: error: symbol `stos_w' redefined
+s.s:6664: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6664: error: symbol `stos_w' redefined
+s.s:6666: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6666: error: symbol `stos_w' redefined
+s.s:6668: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6668: error: symbol `stos_w' redefined
+s.s:6670: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6670: error: symbol `stos_w' redefined
+s.s:6672: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6672: error: symbol `stos_w' redefined
+s.s:6674: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6674: error: symbol `stos_w' redefined
+s.s:6676: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6676: error: symbol `stos_w' redefined
+s.s:6678: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6678: error: symbol `stos_w' redefined
+s.s:6686: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:6686: error: symbol `stos_w' redefined
+s.s:10558: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:10558: error: symbol `stos_w' redefined
+s.s:11112: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:11112: error: symbol `stos_w' redefined
+s.s:11114: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:11114: error: symbol `stos_w' redefined
+s.s:11116: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:11116: error: symbol `stos_w' redefined
+s.s:12070: error: parser: instruction expected
+s.s:12079: error: parser: instruction expected
+s.s:12119: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:12119: error: symbol `lods_w' redefined
+s.s:12534: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:12534: error: symbol `lods_w' redefined
+s.s:12555: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:12555: error: symbol `lods_w' redefined
+s.s:13007: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13007: error: symbol `lods_w' redefined
+s.s:13009: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13009: error: symbol `lods_w' redefined
+s.s:13252: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13252: error: symbol `stos_w' redefined
+s.s:13254: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13254: error: symbol `stos_w' redefined
+s.s:13258: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13258: error: symbol `stos_w' redefined
+s.s:13260: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13260: error: symbol `stos_w' redefined
+s.s:13857: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13857: error: symbol `lods_w' redefined
+s.s:13859: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13859: error: symbol `lods_w' redefined
+s.s:13907: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:13907: error: symbol `stos_w' redefined
+s.s:14720: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:14720: error: symbol `stos_w' redefined
+s.s:14722: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:14722: error: symbol `stos_w' redefined
+s.s:14728: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:14728: error: symbol `stos_w' redefined
+s.s:14962: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:14962: error: symbol `stos_w' redefined
+s.s:15216: error: parser: instruction expected
+s.s:15473: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:15473: error: symbol `stos_w' redefined
+s.s:15478: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:15478: error: symbol `stos_w' redefined
+s.s:15677: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:15677: error: symbol `stos_w' redefined
+s.s:15679: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:15679: error: symbol `stos_w' redefined
+s.s:15683: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:15683: error: symbol `stos_w' redefined
+s.s:15932: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:15932: error: symbol `stos_w' redefined
+s.s:16231: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:16231: error: symbol `stos_w' redefined
+s.s:16704: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:16704: error: symbol `stos_w' redefined
+s.s:16706: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:16706: error: symbol `stos_w' redefined
+s.s:16708: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:16708: error: symbol `stos_w' redefined
+s.s:16710: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:16710: error: symbol `stos_w' redefined
+s.s:16713: warning: label alone on a line without a colon might be in error [-w+orphan-labels]
+s.s:16713: error: symbol `stos_w' redefined
+makefile:49: recipe for target 's.o' failed
+make: *** [s.o] Error 1
